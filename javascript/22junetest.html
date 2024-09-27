@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+//Q 1. Swap two variables without using third variable? a = 5, b = 10
+
+// let a = 5;
+// let b = 10; 
+
+// [a , b] = [b , a] 
+
+// console.log(a)
+// console.log(b)
+
+
+
+
+
+//Q 2. What will be the output ?
+
+// let a = 5;
+// a++;
+// console.log(a);
+
+//output will be 6
+
+
+
+
+//Q 3. Write a code that takes a number (1-7) and returns the corresponding day of the week.
+// 1 = Sunday, 2 = Monday, 3 = Tuesday, 4 = Wednesday 5 = Thursday, 6 = Friday, 7 = Saturday
+
+// let day = prompt("enter the number from 1 to 7");
+// day = Number(day);
+
+
+// if(day == 1){
+// console.log("Today is monday")
+// }
+// else if (day == 2){
+//     console.log("Today is tuesday")
+// }
+// else if(day == 3){
+//     console.log("Today is wednesday")
+// }
+// else if(day == 4){
+//     console.log("Today is thursday")
+// }
+// else if(day == 5){
+//     console.log("Today is friday")
+// }
+// else if(day == 6){
+//     console.log("Today is saturday")
+// }
+// else if(day == 7){
+// console.log("Today is sunday")
+// }
+// else {
+//     console.log("Invalid input")
+// }
+
+
+
+
+
+//Q 4. Double the number of the given array
+
+const numbers = [1,2,3,4,5];
+let doubledNumber = numbers.map((value, index, array)=>{
+    return value * value;
+    console.log(value)
+});
+
+console.log(doubledNumber);     //output  [1, 4, 9, 16, 25]
+
+
+
+
+
+// Q 5. Show Array in Descending Order
+//[34, 7, 23, 32, 5, 62];
+
+
+let array = [34, 7, 23, 32, 5, 62];
+let sortedArray = array.sort((a, b) => b - a);
+console.log(sortedArray); 
+//output [62, 34, 32, 23, 7, 5]
+
+
+
+
+//Q 6. Sort array in Reverse Alphabetical Order 
+// ["banana", "apple", "mango", "cherry"];
+
+
+const fruits = ["banana", "apple", "mango", "cherry"];
+let sortedFruits = fruits.sort((a, b) => b.localeCompare(a));
+console.log(sortedFruits);
+
+
+
+
+
+// Q 7. Remove last two element from an array and add one element at index 2 i.e.,”grapes”and add one element at 0 index i.e., “papaya”
+// ["banana", "apple", "mango", "cherry"];
+
+const fruit = ["banana", "apple", "mango", "cherry"];
+
+fruit [0] = "papaya";
+fruit [2] = "grapes";
+console.log(fruit)
+//output = ["papaya", "apple", "grapes", "cherry"]
+
+
+
+
+// Q 8. Find Highest number from an array
+	// [34, 7, 23, 32, 5, 62];
+
+  const max = [34, 7, 23, 32, 5, 62];
+
+
+  let j = Math.max(...max);
+  console.log(j); 
+
+
+
+  //  Q 9. Replace mango with pineapple 
+	// ["banana", "apple", "mango", "cherry"];
+
+ const replace =  ["banana", "apple", "mango", "cherry"];
+ replace[2] = "pineapple";
+console.log(replace);
+//output =  ['banana', 'apple', 'pineapple', 'cherry']
+
+
+
+//Q 10. [‘abc’, 13, 12, 16, 17, ’xyz’, 6, 5, 4, ‘cat’];
+//Sum of all the elements and separately show the string value ?
+
+//let arr = [‘abc’, 13, 12, 16, 17, ’xyz’, 6, 5, 4, ‘cat’];
+
+
+
+
+
+
+//Q 11. Set array of object in session storage and retrieve it in a variable with key name, age, email, address:{ city,state,country } ?
+
+let Name = "Sakshi"
+sessionStorage.setItem('Data', Name);
+console.log(sessionStorage.setItem('Data'))
+
+
+
+
+
+
+
+
+//Q 12. [ [ 1, 2 ], [ 3, 4 ], [ 5, 6 ] ];
+//Reduce an array and make it a single value ?
+
+let arr = [ [ 1, 2 ], [ 3, 4 ], [ 5, 6 ] ];
+
+let newarr = arr.reduce((value, index, array)=>{
+    return value + value;
+})
+console.log(newarr);
+
+
+
+
+
+//Q 13. Set array values in local storage and retrieve it in a variable with
+//index value
+//Let arr = [ ‘pooja’, ‘ sid’, ’twinkal ’, ’ vishal’, ’shubham’ ] ?
+
+
+
+
+
+// Q 14. sort an array
+// 	[ 3, 2, 5, 7, 8, 10, 9 ] ?
+
+let s = [ 3, 2, 5, 7, 8, 10, 9 ] 
+let news = s.sort();
+console.log(news);
+
+
+
+
+//Q 15. let [ ‘ raj ’, 20, 18796, ’raj@gmail.com’, [ ‘indore’,’ india ’ ] ];
+//Show element element in a avariable ?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

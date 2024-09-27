@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+.main{
+
+    height: 100%;
+ float: left;
+ width: 40%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ box-sizing: border-box;
+ background-color: rgba(54, 44, 44, 0.918);
+
+}
+
+.sec{
+    height: 100%;
+ width: 60%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ box-sizing: border-box;
+background-image: url(https://i.pinimg.com/736x/c8/b0/7e/c8b07e380215edaaa1903769586a61dc.jpg);
+}
+
+
+input{
+
+margin: 10px;
+margin-bottom: 20px;
+box-sizing: border-box;
+height: 30px;
+width: 230px;
+margin-left: 60px;
+
+}
+
+label{
+    font-size: x-large;
+font-weight: 600;
+color: #f37059;
+margin-left: 120px;
+text-shadow: 2px 1px rgba(195, 228, 8, 0.411);
+}
+
+button{
+    font-size: medium;
+    height: 40px;
+    width: 100px;
+
+    font-weight: bolder;
+    color: hwb(0 100% 0%);
+    background-color: dodgerblue;
+    cursor: pointer;
+border-radius: 20px;
+margin-left: 120px;
+text-shadow: 2px 3px rgb(42, 6, 245);
+
+
+}
+
+button:hover {
+    background-color: deepskyblue;
+}
+
+
+h3 {
+    margin-left: 60px;
+    font-style: italic;
+    color: white;
+
+}
+
+h4 {
+margin-left: 90px;
+    color: rgb(253, 253, 253);
+    font-style: italic;
+    font-weight: bolder;
+
+}
+
+h1{
+    color: aliceblue;
+    font-style: italic;
+    text-shadow: 2px 1px rgba(195, 228, 8, 0.411);
+width: 400px;
+height: 50px;
+margin-left: 20px;
+}
+a{
+    
+    text-decoration: none;
+    color: black;
+    font-size: 20px
+}
+    </style>
+</head>
+<body>
+    <div class="main">
+        <form>
+
+                <h1>Welcome to MyLibrary</h1>
+                
+                <label>Username:</label><br>
+            <input type="text" id="user" placeholder="Enter your Username"><br>
+            <label>Password:</label><br>
+<input type="password" id="pass" placeholder="Enter your password"><br>
+<button onclick="login(event)">Sign in</button>
+<h3>___________Or___________</h3>
+<h4>New user? <span><a href="task1.html">Create account</a></span></h4>
+         </form>
+
+    </div>
+
+
+        <div class="sec"></div>
+
+<script>
+
+function login(event){
+    event.preventDefault();
+let user = document.getElementById('user').value;
+let pass = document.getElementById('pass').value;
+
+let myData = JSON.parse(localStorage.getItem('key'));
+
+if(myData.find((value)=>{
+return value.email == user && value.pass == pass 
+})){
+let findData=myData.filter((value)=>{
+    return value.email == user && value.pass==pass;
+})[0]
+localStorage.setItem('name',findData.fname)
+alert('Login SuccessFul')
+
+window.location.href="task3.html";
+
+
+}else{
+    alert('Login Failed');
+}
+}
+
+
+
+
+
+
+</script>
+     
+    
+</body>
+</html>

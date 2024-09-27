@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Javascript basic</title>
+<!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+
+
+
+
+
+
+<body>
+    <!-- <h1 id="main">I am Sakshi</h1> -->
+    <!-- <h2 class="myclass">I am from Indore</h2> -->
+    <!-- <button>click me</button> -->
+
+<!-- <div> -->
+    <!-- <h1>Fruits</h1> -->
+    <!-- <ul> -->
+        <!-- <li>Mango</li> -->
+        <!-- <li>Apple</li> -->
+        <!-- <li>lichi</li> -->
+    <!-- </ul> -->
+<!-- </div> -->
+<!--  -->
+<!-- <h2>Hello Javascript !</h2> -->
+
+    <script>
+
+// const user = {
+    // username: "sakshi",
+    // price: 999,
+// 
+    // welcomeMessage: function(){
+        // console.log(`${this.username}, welcome to website`);
+    // }
+// }
+
+// user.welcomeMessage()
+// user.username = "dimple"
+// user.welcomeMessage()
+
+// function chai(){
+    // let username = "sakshi"
+// console.log(this);
+// }
+// chai()
+// 
+
+// const chai=()=>{
+    // let username = "sakshi"
+    // console.log(this.username);
+// }
+// chai()
+// 
+
+
+//baaic arrow function
+// const addTwo = (num1, num2)=>{
+    // return num1 + num2
+// }
+// console.log(addTwo(3,4))
+
+
+
+//implicit arrow function = no need to use braces and return 
+// const addTwo = (num1, num2)=> ( num1 + num2 )
+// 
+// console.log(addTwo(3,4))
+// 
+
+
+//IIFE function
+
+// (function chai(){
+    // console.log('sakshi');
+// })();
+// 
+// 
+
+// ( (name) => {
+    // console.log(`i am ${name}`);
+// })('sakshi')
+
+
+
+//Data type conversion 
+
+// let score = "33abc" 
+// 
+// console.log(typeof score);
+// 
+// let valueinNumber = Number(score);
+// console.log(valueinNumber);
+// 
+// 
+// let numb = 45;
+// console.log(typeof numb);
+// 
+// let converttoString = String(numb);
+// console.log(converttoString)
+// console.log(typeof converttoString)
+
+// "33" => 33
+// "33abc" => NaN
+
+
+// let isLoggedIn = 1
+// 
+// let booleanIsLoggedIn = Boolean(isLoggedIn)
+// console.log(booleanIsLoggedIn);
+
+// 1 => true;  0 => false 
+// ""  => false 
+//  "sakshi" => true 
+
+// let str1 = "hello"
+// let str2 = " sakshi"
+// let str3 = str1 + str2
+// console.log(str3);
+// 
+// 
+// console.log("1" + 2);
+// console.log(1 + "2");
+// console.log(1 + 1 + "2");
+// console.log("2" + 1 + 1);
+// console.log( ( 3 + 4) * 5 % 3);
+// 
+
+// console.log(+true);
+// 
+// 
+// let num1 , num2, num3 
+// num1 = num2 = num3 = 2 + 2 + 2
+
+
+// let gameCounter = 100
+// gameCounter++;
+// console.log(gameCounter);
+
+
+// console.log(2 > 1);
+// console.log(2 >= 1);
+// console.log(2 < 1);
+// console.log(2 <= 1);
+// console.log(2 == 1);
+// console.log(2 != 1);
+
+// console.log("2" > 1);   //automatically convert string to number
+// console.log("02" > 1);
+// console.log(null > 0);
+// console.log(null == 0);
+// console.log(null >= 0);
+// console.log(null != 0);
+// console.log(undefined == 0);
+// console.log(undefined > 0);
+// console.log(undefined < 0);
+// 
+// console.log("2" === 2);
+// 
+
+
+
+//primitive data types 
+//7 - number, string, boolean, symbol, undefined, null , bigint
+
+//non-primitive data types 
+// 3 -- objects, array, function 
+
+// const score = 100
+// const scoreValue = 100.3   //number
+// 
+// const isLoggedIn = false   //boolean
+// const outsideTemp = null  
+// let userEmail;
+// 
+// const id = Symbol('124')
+// const anotherId = Symbol('123')
+// console.log(id === anotherId);
+// 
+// const bigNumber = 23243435465675767n
+
+// const heros = ["shaktiman", "nagraaj", "doga"];
+// 
+// let myObj = {
+    // name: "sakshi",
+    // age: 24
+// }
+// console.log(myObj)
+// 
+// const myFun = function(){
+    // console.log("hello world")
+// }
+// myFun();
+// 
+
+// +++++++++++++++++++++++++
+
+// stack (primitive )  &   heap ( non primitive )
+
+
+//  ++++++++++++++++++++++
+// string -- use in single or double quotes 
+
+// const name = "sakshi"
+// const repoCount = 50
+// console.log(name + repoCount + "value");
+// console.log(`hello my name is ${name} and my repoCount is ${repoCount} value`)
+
+
+// const gameName = new String('sakshi')
+// console.log(gameName)
+// console.log(gameName[0])
+// console.log(gameName.length)
+// console.log(gameName.toUpperCase());
+// console.log(gameName.charAt(2));   //k
+// console.log(gameName.lastiOf('s'));    //3
+// console.log(gameName.iOf('s'));    //0
+// 
+// const newString = gameName.substring(0,4)
+// console.log(newString);
+// 
+// const anotherString = gameName.slice(-2,4)
+// console.log(anotherString);
+// 
+// 
+// const newStringOne = "     sakshi      "   
+// console.log(newStringOne)
+// console.log(newStringOne.trim());
+// 
+// 
+// console.log(gameName.split('-'));  //convert string to array
+// 
+// const url = "sakshi%20@google.com"
+// console.log(url.replace('%20', '%40'))
+
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+// numbers & maths 
+
+// const score = 400
+// console.log(score);
+// 
+// 
+// const balance = new Number(100)
+// console.log(balance);
+// 
+// console.log(balance.toString().length);
+// console.log(balance.toFixed(1));
+// 
+// 
+// const otherNumber = 123.8967
+// console.log(otherNumber.toPrecision(4));
+// 
+// 
+// const hundreds = 10000000
+// console.log(hundreds.toLocaleString('en=IN'));
+
+
+//+++++++++++++++++ MATHS +++++++++++++++++++++=
+// console.log(Math);
+// 
+// console.log(Math.abs(-4));
+// console.log(Math.round(4.6));
+// console.log(Math.ceil(4.2));
+// console.log(Math.floor(4.9))
+// console.log(Math.min(4,6,7,2));
+// console.log(Math.max(9,42,6,4));
+// console.log(Math.floor(Math.random()*10) + 1 );
+// 
+// const min = 10
+// const max = 20 
+// 
+// console.log (Math.floor(Math.random() * (max - min + 1 )) + min)
+// 
+
+//++++++++++++++++++++ Date and Time +++++++++++++++++++
+
+// let myDate = new Date()
+// console.log(myDate.toDateString());
+// console.log(myDate.toLocaleString());
+// console.log(typeof myDate);
+// 
+// 
+// let myCreatedDate = new Date(2024,0,23,5,4)
+// console.log(myCreatedDate.toDateString());
+// console.log(myCreatedDate.toLocaleString());
+// 
+// let myCreatedDate = new Date("01-02-2024")
+// console.log(myCreatedDate.toLocaleString());
+
+
+// let myTimeStamp = Date.now()
+// console.log(myTimeStamp);
+// 
+// console.log(Math.floor(Date.now()/1000));
+// 
+
+// let newDate = new Date()
+// console.log(newDate);
+// console.log(newDate.getDate());
+// console.log(newDate.getDay());
+// console.log(newDate.getMonth() + 1 );
+// 
+// 
+// 
+// console.log(`${newDate.getDay()} and the time`);
+
+
+
+//+++++++++++++++++ Arrays +++++++++++++++++++++++
+
+
+
+// const myHeroes = ["shaktiman", "nagraj", "spiderman"]
+// console.log(myHeroes);
+// 
+// array methods 
+// const myArr =  [0, 1 , 2, 3, 4, 5]
+// console.log(myArr[3]);
+// 
+// myArr.push(6)
+// console.log(myArr);
+// 
+// 
+// myArr.pop()
+// console.log(myArr);
+// 
+// myArr.unshift(9)
+// console.log(myArr);
+// 
+// myArr.shift();
+// console.log(myArr.includes(9));
+// console.log(myArr.iOf(3));
+// 
+// 
+// console.log(myArr);
+// 
+// 
+//slice, splice 
+
+
+// const marvel_heroes = ["thor", "ironman"]
+// const dc =["superman", "flash"]
+// marvel_heroes.push(dc);
+// console.log(marvel_heroes)
+// 
+// const allheroes = marvel_heroes.concat(dc)
+// console.log(allheroes);
+
+// const all_new_heroes = [...marvel_heroes, dc]
+// console.log(all_new_heroes)
+// 
+
+// const array= [12, 4, [4, 5, 6] , 7 , [6,7,[4,5]]]
+// 
+// const another_array = array.flat(Infinity);
+// console.log(another_array);
+
+
+// console.log(Array.isArray("Sakshi"))
+// console.log(Array.from("Sakshi"));
+// console.log(Array.from({name: "Sakshi"}))
+// 
+
+//+++++++++++=++== OBJECT IN JS ++++++++++++++++++
+
+//singletone 
+//object literals 
+// const mySym = Symbol("key1")
+// const JsUser = {
+    // user: "sakshi",
+    // age: 24,
+    // [mySym]: "mykey1",
+    // location: "indore",
+    // email: "sakshi@gmail.com",
+    // isLoggedIn: false,
+    // lastLogin: ["monday", "tuesday"]
+// }
+// console.log(JsUser);
+// console.log(JsUser["email"]);
+// console.log(JsUser.age);
+// console.log(JsUser[mySym]);
+// JsUser.email =  "dimple@gmail.com"
+// console.log(JsUser.email);
+// Object.freeze(JsUser);
+
+
+// JsUser.greeting = function(){
+    // console.log("hello js user");
+// }
+// 
+// 
+// JsUser.greetingtwo = function(){
+    // console.log(`hello js user ${this.user}`);
+// }
+// console.log(JsUser.greeting());
+// console.log(JsUser.greetingtwo());
+// 
+
+
+// const tinderUser = new Object()   //singletone 
+
+// const tinderUser = {}
+// tinderUser.id = "123abc"
+// tinderUser.name = "sakshi"
+// tinderUser.isLoggedIn = false 
+// 
+
+// console.log(tinderUser);
+
+
+// const regularUser = {
+    // email: "sakshi@gmail.com",
+    // fullName: {
+        // firstName: "sakshi",
+        // lastName: "thakur"
+    // }
+// }
+// 
+// console.log(regularUser.fullName.firstName);
+
+
+// const obj1 = { 1: "a", 2: "b"}
+// const obj2 = {3: "a", 4: "d"}
+// const obj3 = {obj1, obj2}
+// const obj3 = Object.assign({}, obj1, obj2)
+// const obj3 = {...obj1, ...obj2}
+// console.log(obj3);
+
+// const users = [
+    // {
+        // id: 1,
+        // email: "sakshi@gmail.com"
+    // }
+// ]
+// console.log(tinderUser);
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));
+// console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+
+
+//+++++++++++++++++++++++++++++++++++++++
+
+// Destructuring of Object 
+
+// const course = {
+    // courseName: "js in hindi",
+    // price: "999",
+    // tutor: "hitesh"
+// }
+// const {tutor} = course
+// console.log(tutor);
+
+
+
+
+// let { a , b } = { a: 1 , b: 5}
+// console.log(a , b);
+// 
+// 
+// 
+// const myProfile = {
+    // name: "sakshi",
+    // age: 24,
+    // address: "indore",
+    // place: "indore"
+// }
+// 
+// const { name , age } = myProfile
+// console.log(name, age)
+
+
+// let a , b , rest;
+// [a , b, ...rest] = [ 19 , 29, 30, 5, 34, 45];
+// console.log(a);
+// console.log(b);
+// console.log(a, ...rest)
+
+
+// const myProfile = {
+//  name: "sakshi",
+//  age: 24,
+//  address: 
+//  { 
+    // pin : 242343,
+//  place: "indore"
+// }
+// }
+// 
+// const { name , age , address } = myProfile
+// console.log(name)
+// 
+
+// let arr = [ 34, 454, 45, 3, 4]
+// let [ a , b, c, d, e] = arr
+// console.log(a , b , c, d, e);
+// console.log(arr);
+// 
+// 
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// let a = {};
+// let b = {key: "b"};
+// let c = {key: "c"};
+
+// a[b] = 123;
+// a[c] = 456;
+// console.log(a[b]);
+//output = 456 
+
+
+////+++++++++++++Functions++++++++++++++++++++
+
+
+//1. function sayMyName(){
+//     console.log("sakshi");
+// }
+// sayMyName();
+
+
+//2. function addTwoNumbers(number1, number2){   //parameters 
+//     console.log(number1 + number2);
+// }
+
+// addTwoNumbers(3, 5);            //arguments
+
+
+//3. function addTwoNumbers(number1, number2){
+//     let result = number1 + number2
+//     console.log("result", result)
+//     return result
+// }
+// const result = addTwoNumbers(3,5);
+
+
+
+
+//4. function addTwoNumbers(number1, number2){
+//     return number1 + number2
+// }
+
+// const result =  addTwoNumbers(4,5);
+// console.log("result", result);
+
+
+//5. function loginUser(username){
+//     return `${username} just logged in`
+// }
+// const name = loginUser("sakshi");
+// // console.log(loginUser("sakshi"));
+// console.log(name);
+
+
+//6. function loginUser(username){
+    // if(!username){
+        // console.log("please enter a username");
+        //  return 
+    // }
+    // return `${username} just logged in`
+// }
+// console.log(loginUser("sakshi"))
+// 
+
+
+//7. function calculateCartPrice(...num1){
+    //    return num1
+// }
+// 
+// console.log(calculateCartPrice(200, 400, 500, 600))
+//output - [200, 400, 500, 600]
+
+
+// 8. function calculateCartPrice(val1, val2, ...val3){
+//     return val3
+// }
+// console.log(calculateCartPrice(343, 456,678,2323,45656));
+
+////////////////////////////////////////////////////
+//++++++++++++++functions with object & arrays+++++++
+
+// method1.  const user = {
+    // name: "sakshi",
+    // price: 999
+// }
+// 
+// function handleObject(anyobject){
+    // console.log(`username is ${anyobject.name} and price is ${anyobject.price}`)
+// }
+// handleObject(user);
+// 
+
+
+
+// method.2
+// function handleObject(anyobject){
+//     console.log(`username is ${anyobject.username} and price is ${anyobject.price}`)
+// }
+// handleObject({
+//     username: "sakshi",
+//     price: 999
+// })
+
+
+// var a = true;
+// var b = false; 
+// var c = null;
+// 
+// var result = (c == null);
+// console.log(x = result);
+//output = true 
+
+
+/////////functions in array 
+
+// const myNewArray = [ 200, 400, 500, 600]
+// 
+// function myArray(array){
+    //    return array[1];
+// }
+// console.log(myArray(myNewArray));
+// console.log(myArray([200, 400, 500, 600]));
+
+
+//+++++++++++++++++block & global scope++++++++++++++
+
+// let a = 10
+// const b = 20        //global scope
+// var c = 300
+
+
+// if (true) {
+//     let a = 10     //block scope 
+// const b = 20
+// var c = 30 
+// }
+//  console.log(a);
+//  console.log(b);
+//  console.log(c);
+
+
+////////////////////////////////////////////////
+
+// function one(){
+//     const name = "sakshi"
+     
+//  function two(){
+//       const website = "youtube"
+//     console.log(name);
+
+
+//     function three(){
+//      const age = 24;
+//      console.log(website);
+//     }
+//     three();
+//  }
+
+// two();
+
+// }
+// one();
+
+//////////////////////////////////////////////
+
+// if (true) {
+    // const name = "sakshi"
+    // if ( name === "sakshi") {
+        // const website = " youtube"
+        // console.log(name + website);
+    // }
+
+// }
+
+//+++++++++++++++++ Interesting +++++++++++++++++++++++|
+
+// console.log(addOne(5));  -- right- use before initialization as well
+// function addOne(num1){
+//     return num1 + 1
+// }
+// console.log(addOne(5));
+
+
+//++++++++++++++++++++++++++++++
+// console.log(fun(6)); ///wrongggg - can not use before initialization
+// const fun = function(num2){
+    // return num2 + 2
+// }
+// console.log(fun(6));
+
+
+//+++++++++++++++++ arrow function & this keyword ++++++++++++++++++++++++
+
+// const user = {
+//     username: "sakshi",
+//     price:999,
+
+//     welcomeMessage: function(){
+//         console.log(`${this.username}, welcome to website`);
+//          console.log(this);
+//     }
+// }
+// user.welcomeMessage();
+// user.username = "dimple"
+// user.welcomeMessage();
+// console.log(this);
+
+
+// function chai(){
+//     let username = "sakshi"
+//     console.log(this.username);
+// }
+// chai();
+//output - undefined -- can not use this in function 
+
+
+// const chai = function(){
+//     let username = "sakshi"
+//     console.log(this.username);
+// }
+// chai();
+//output - undefined -- can not use this in function 
+
+
+// const chai=()=>{
+    // let username = "sakshi"
+    // console.log(this.username);
+// }
+// chai();
+//output - undefined -- can not use this in arrow function 
+
+
+// arrow functionnnnnn
+
+
+// const addTwo=(num1, num2)=>{
+    // return num1 + num2
+// }
+// console.log(addTwo(4,5));
+
+
+
+//implic function 
+
+// const addTwo=(num1, num2)=> num1 + num2
+// console.log(addTwo(4,6));
+
+/////////////////////////
+// const addTwo=(num1, num2)=> (num1 + num2)
+// console.log(addTwo(4,6));
+
+
+
+// const chai = (num1, num2)=> ({username: "sakshi"})
+// console.log(chai(4,3));
+
+
+//++++++++++++++++++++++ IIFE ++++++++++++++++++++
+
+// (function chai(){
+//     console.log("sakshi");
+// })();
+//output - sakshi
+
+// (  (name) => {
+//     console.log(`${name} learning javascript`);
+// }) ("sakshi");
+
+///////////////////////////////////////////////
+
+//++++++++++++++++++ Control flow +++++++++++++++
+
+// const temperature = 41
+// if (temperature === 41) {
+//     console.log("less than 50")
+// }
+// else {
+//     console.log("temp is greater than 50");
+// }
+
+//++++++++++++++++++++++++++++++++++++++++
+
+// const score = 200
+// if (score > 100) {
+//     let power = "fly"
+//     console.log(`user power: ${power}`);
+// }
+
+//wrong practice of writing code
+// const balance = 1000 
+// if (balance > 500) console.log("test"), console.log("test2");
+
+
+// const balance = 1000
+// if ( balance < 500) {
+//     console.log("less than 500");
+// }
+//  else if( balance < 750)
+// {
+//     console.log("les than 750");
+// }
+//  else if ( balance < 900)
+//  {
+// console.log("less than 900");
+// } else {
+//     console.log("less than 1200");
+// }
+
+
+//+++++++++++++++++++++++++++++++++++++++
+
+// const userloggedin = true
+// const debitcard = true
+
+// if (userloggedin && debitcard && 2==3) {
+//     console.log("allow to buy course");
+// }
+// else {
+//     console.log("you can't buy");
+// }
+//////////////////////////////////////////
+// const isLoggedIn = false
+// const isloggedemail = true 
+
+// if (isLoggedIn || isloggedemail) {
+//     console.log("you can login");
+// }
+
+//+++++++++++++ switch cases +++++++++++++
+
+// const month = 3 
+
+// switch (month) {
+//     case 1: 
+//     console.log("january")
+        
+//         break;
+
+//         case 2: 
+//     console.log("feb");
+        
+//         break;
+
+//         case 3: 
+//     console.log("march");
+        
+//         break;
+
+//         case 4: 
+//     console.log("april");
+        
+//         break;
+
+//     default:
+//         console.log("default case match");
+//         break;
+// }
+
+//////////////////////////////////////////////////////////////
+
+// notes = falsy values --> false, 0, -0 , BigInt 0n , "" , null , undefined, NaN
+//truthy values --> true, 1, "anyString" , "0" , "false" (in string) , " " (space in string) , {} , [] , function(){},   
+
+// const userEmail = []
+// if (userEmail) {
+//     console.log("got user email")
+// } else {
+//     console.log("don't have user email");
+// }
+
+/////////////////////////////////////////////
+
+// if (userEmail.length === 0 ) {
+    // console.log("array is empty");   
+// }
+// 
+// 
+// 
+// const emptyObj = {}
+// if (Object.keys(emptyObj).length === 0 ) {
+    // console.log("object is empty");
+// }
+/////////////////////////////////////////////////
+
+//nullish coalescing operator (??) : used for null n undefined 
+
+// let val1; 
+// val1 = 5 ?? 10;      //5
+// val1 = 10 ?? 15;    //10
+// val1 = null ?? 20;   //20
+// val1 = undefined ?? 30; //30
+// val1 = null ?? undefined;  //output = undefined 
+// val1 = undefined ?? null;    //output = null 
+// console.log(val1);
+
+//++++++++++++++++++++++++++++++++++++++++++
+// Terniary operator 
+
+// condition ? true : false
+
+// const iceTeaPrice = 100 
+// iceTeaPrice <= 80 ? console.log("its more than 80") : console.log("price is less than 80");
+
+
+//++++++++++++++++++ Loopssss +++++++++++++++++++++++++++++++
+
+//for - loop 
+// for (let i = 0; i <= 10; i++) {
+    
+//     const element = i;
+// if (element == 5 ) {
+    // console.log("5 is best number");
+
+
+// }
+// console.log(element);\\ 
+// }
+// ////////////////////////////////////////////
+
+// for (let i = 1; i <= 10; i++) {
+    // console.log(`inner i loop value ${i}`);
+    // for (let j = 1; j <= 10; j++) {
+            //    console.log(`outer j loop value is ${j} and inner loop ${i}`);
+            // console.log(i + '*' + j + '=' + i * j);
+            // console.log(`Multiplication of ${i} * ${j} = ${i * j}`);
+    // }
+    // 
+// }
+////////// loops in array +++++++++++++++
+
+
+// let myArray = ["flash", "batman", "superman"]
+// console.log(myArray.length)
+// for (let i = 0; i < myArray.length; i++) {
+//     const element = myArray[i];
+//     console.log(element);
+// }
+
+
+///+++++++++++ Break and continue ++++++++++++
+
+// for (let index = 1; index <= 20; index++) {
+// 
+// if (index == 5) {
+    // console.log("5 detected");
+    // break;
+// }
+// console.log(index);
+// }
+// 
+
+
+// for (let index = 1; index <= 20; index++) {
+
+// if (index == 5) {
+//     console.log("5 detected");
+//           continue;
+// }
+// console.log(index);
+// }
+
+
+//+++++++++++++++++ While and Do while loop +++++++++++++++++++++++++++++++
+
+// let i = 0
+// while ( i <= 10) {
+//     console.log(`value of i is ${i}`);
+//     i++;  // i = 1 
+//     i = i + 2;   // 1 = 1 + 2 = 3 
+// }
+//////////////////////////////////////
+
+// let myArray = ['flash', 'batman', 'superman']
+// let arr = 0
+// while ( arr < myArray.length) {
+    // console.log(myArray[arr]);
+    // arr = arr + 1;
+// 
+// }
+
+///////////// Do- while ////////////////////
+
+// let score = 0
+// do {
+
+//     console.log(`score is ${score}`);
+//     score++
+    
+// } while (score <=20 );
+
+/////////////////////////////////////////////////
+
+//++++++++++++ High Order ARRAY LOOPS ++++++++++++++
+
+//for-of loop
+
+// const arr = [1,2,3,4,5]
+
+// for (const numb of arr) {
+//     console.log(numb);
+// }
+
+
+// const greetings = "hello world!"
+// for (const greet of greetings) {
+//     console.log(`Each character is ${greet}`);
+// }
+////////////////////////////////////////////////
+
+// const map = new Map()
+// map.set('IN', "india")
+// map.set('USA', "united state")
+// map.set('FR', "france")
+// map.set('IN', "India")
+
+// console.log(map);
+
+// for (const key in map) {
+// console.log(key);
+        
+//     }             //not working in map 
+
+
+///////////////////////////////////////////////
+// for (const key of map) {
+//     console.log(key);
+// }
+
+
+// for (const [key, value] of map) {
+//     console.log(key, ':-', value);
+// }
+
+//////////////////////////////////////
+
+// const games = {
+//     game1: "ludo",
+//     game2: "ps5"
+// }
+
+// for (const {key, value} of games) {
+//     console.log(games)
+// }              //this method is not working 
+
+//+++++++++++++++++++++++++ for=in loop ++++++++++++++++++++
+
+// const myObj = {
+//     js: "javascript",
+//     cpp: "c++",
+//     rb: "ruby"
+// }
+// for (const key in myObj) {
+//       console.log(`${key} shortcut is for ${myObj[key]}`);
+// }
+
+
+
+///////////  for in loop in array 
+
+// const programming = ["js", "cpp", "python", "java"]
+// for (const key in programming) {
+//         console.log(`${key} is key of ${programming[key]}`);
+//     }
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+     // FOR EACH LOOP IN ARRAY - (value, index, array) - high order array 
+
+
+    //  const programming = ["js", "python", "cpp", "ruby"]
+      
+    //    programming.forEach (function(value){
+    //        console.log(value);
+    //    })
+
+        
+
+    // const programming = ["js", "python", "cpp", "ruby"]
+    // programming.forEach( (value) => {
+    //     console.log(value);
+    // }
+    // )
+
+    // const programming = ["js", "python", "cpp", "ruby"]
+    //   programming.forEach( (value, index, array)=>{
+    //       console.log(value, index, array)
+    //   })
+
+    //   const programming = ["js", "python", "cpp", "ruby"]
+    //   programming.forEach((value, index, array)=>{
+    //       console.log(value + value);
+    // })
+
+
+
+    //  const programming = ["js", "python", "cpp", "ruby"]
+    //  function printMe(value){
+    //     console.log(value);
+    // }
+    // programming.forEach(printMe);
+
+
+// const language = [
+//     { languagename: "javascript",
+//         filetype: "js"
+//     },
+
+//     {
+//     languagename: "python",
+//         filetype: "py"
+//     },
+
+//     {languagename: "ruby",
+//         filetype: "rb"
+//      }
+//     ]
+
+//     language.forEach((value)=>{
+//         console.log(value.languagename, value.filetype);
+    // })
+
+
+
+//    const coding = ["js", "ruby", "java", "python"]
+   
+//   const values =  coding.forEach((item)=>{
+//            console.log(item)
+//            return item
+//    })
+// console.log(values);
+
+
+////////////////////////////////////////////////////
+
+//++++++++++++++ Filter, map and Reduce ++++++++++++++++++++++++++++++++
+
+// const numb = [1 , 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+// const newNumb = numb.filter( (numbers)=>{
+//           return numbers > 4
+// })
+// console.log(newNumb);
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// const numb = [1 , 2, 3, 4, 5, 6, 7, 8, 9, 10]
+ 
+// const newNumb = numb.filter((numbers)=>{
+//     return numbers < 5
+// })
+// console.log(newNumb);
+//++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+// const myNumb = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+// const newNumb = []
+
+// myNumb.forEach((numbers)=>{
+//     if ( numbers < 5) {
+//         newNumb.push(numbers);     
+//     }
+// });
+// console.log(newNumb);
+
+/////////////////////////////////////////////////
+
+
+// const books = [
+
+// { title: 'Book one', genre: 'fiction', publish: 1981,
+//     edition: 2004},
+
+//     { title: 'Book two', genre: 'non- fiction', publish: 1992,
+//     edition: 2008},
+
+//     { title: 'Book three', genre: 'history', publish: 1999,
+//     edition: 2007},
+
+//     { title: 'Book four', genre: 'non-fiction', publish: 1989,
+//     edition: 2010},
+
+//     { title: 'Book five', genre: 'science', publish: 2009,
+//     edition: 2014},
+
+//     { title: 'Book six', genre: 'fiction', publish: 1987,
+//     edition: 2010},
+
+//     { title: 'Book seven', genre: 'history', publish: 1986,
+//     edition: 1996},
+
+//     { title: 'Book eight', genre: 'science', publish: 2011,
+//     edition: 2016},
+
+//     { title: 'Book nine', genre: 'non-fiction', publish: 1981,
+//     edition: 1989}
+// ];
+
+// let userbooks = books.filter(( bk )=>  bk.genre === 'history' )
+
+//  let mybooks = books.filter((bk)=> { 
+//   return  bk.publish >= 1999 && bk.genre === 'science'
+// });
+ 
+
+// let booksss = books.filter((bk)=>{
+//     return bk.edition >= 2008
+// })
+
+
+// console.log(userbooks);
+// console.log(mybooks);
+// console.log(booksss);
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// 
+
+// const myNumbs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+// const newNumb = myNumbs.map((numb)=>{
+//     return numb + 10
+// })
+// console.log(newNumb);
+
+/////////////////////// by foreach method +++++++++
+
+// const myNumbs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// const newarr = []
+//   myNumbs.forEach((value)=>{
+//     newarr.push( value + 10);
+//  })
+//  console.log(newarr);
+
+//////////////////////////////////////////////
+
+
+// const myNumbs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+// const newnumb = myNumbs.map((numbs)=> numbs * 10)
+//                        .map((numbs)=> numbs + 1)
+//                        .filter((numb)=> numb >= 40 )
+//                        .reduce((initial, final)=> initial + final )
+// console.log(newnumb);
+
+////////////////////////////////////////////////
+
+// const myNumb = [1,2, 3, 4]
+// const total = myNumb.reduce((initial, final)=>{
+//     console.log(`initial ${initial} & final value ${final}`)
+//        return initial + final
+// }, 0)
+// console.log(total);
+ 
+////////////////////////////////////////////////
+
+// const shoppingCart = [
+
+// {
+//  course: "python",
+//  price: 499
+// },
+
+// {
+//  course: "js",
+//  price: 999,
+// },
+
+// {
+//  course: "data science",
+//  price: 1499
+// },
+
+// {
+//  course: "machine learning",
+//  price: 2999
+// }
+// ]
+
+// const totalPrice = shoppingCart.reduce((initial, final)=>{
+//     console.log(`initial price ${initial} & final price is ${final.price}`)
+//     return initial + final.price
+// } , 499)
+// console.log(totalPrice);
+
+////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>

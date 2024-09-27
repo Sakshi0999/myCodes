@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// function addNum(a,b,c){
+//     return a + b + c;
+// }
+// console.log(addNum(10,20,30));
+
+
+
+//It is a technique in functional programming, that transforms the function of multiple arguments into several functions of a single argument in sequence. 
+
+//We simply wrap a function inside a function, which means we are going to return a function from another function to obtain this kind of translation.
+// The parent function takes the first provided argument and returns the function that takes the next argument and this keeps on repeating till the number of arguments ends. Hopefully,
+// the function that receives the last argument returns the expected result.  
+
+
+
+
+function curryFun(a){
+    return function(b){
+        return function(c){
+            return a + b + c;
+}
+    }
+}
+
+
+let one = curryFun(1);
+let two = one(2);
+let three = two(3);
+console.log(three);
+
+
+
+
+console.log(infiniteCurry(1)(2)(3)(6)(7)());
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

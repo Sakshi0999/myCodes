@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+
+    <Style>
+        
+
+        .full{
+
+background-image: url(https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3B4NzE4MzAzLWltYWdlLWt3dnhqNDhyLmpwZw.jpg);
+justify-content: center;
+align-items: center;
+}
+
+.main{
+
+height: 443px;
+width: 400px;
+border: 10px wheat solid;
+margin-left: 420px;
+margin-top: 80px;
+border-radius: 50px;
+display: block;
+box-shadow: 0 4px 8px rgba(250, 0, 0, 0.1);
+
+}
+
+input{
+
+    margin: 10px;
+   margin-bottom: 20px;
+   border-radius: 10px;
+   box-sizing: border-box;
+   width: 180px;
+   
+}
+
+label{
+    font-size: x-large;
+font-weight: 600;
+color: white;
+margin-left: 23px;
+display: flexbox;
+}
+
+
+h1{
+    color: white;
+    margin-bottom: 50px;
+    font-style: italic;
+
+}
+
+button{
+    font-size: medium;
+    font-weight: bolder;
+    color: hwb(0 100% 0%);
+    background-color: dodgerblue;
+    cursor: pointer;
+border-radius: 20px;
+
+}
+
+button:hover {
+            background-color: rgb(255, 166, 0);
+        }
+
+
+
+
+    </Style>
+</head>
+<body class="full">
+
+
+
+    <div class="main">
+        <center>
+<h1>Library Registration Form</h1>
+<form style="margin: -24px;;">
+<label>First Name:</label>
+<input type="text" id="first" placeholder="Enter your First name" required><br>
+
+<label>Last Name:</label>
+<input type="text" id="last" placeholder="Enter your Last name" required>
+<br>
+<label>Email:</label>
+<input type="email" id="email" placeholder="Enter your email" required >
+<br>
+<label>Phone no.</label>
+<input type="number" id="num" placeholder="enter your number" required>
+<label>Password:</label>
+<input type="password" id="pass" placeholder="Enter your password" required>
+<br>
+<label> Confirm Password</label>
+<input type="password" id="confirm" placeholder="Enter your password" required>
+<br>
+<button id="submit" onclick="Registration()">ADD A MEMBER</button>
+
+</form>
+</div></center>
+
+
+<script>
+debugger
+function Registration(){
+    event.preventDefault();
+
+let fname = document.getElementById('first').value;
+let last = document.getElementById('last').value;
+let email = document.getElementById('email').value;
+let num = document.getElementById('num').value;
+let pass = document.getElementById('pass').value;
+let confirm = document.getElementById('confirm').value;
+
+if( !first || !last || !email || !num || !pass || !confirm){
+    alert("all fields are necessary to fill");
+    return
+}
+
+if (pass != confirm){
+    alert("Password and confirm password is incorrect");
+    return
+}
+
+let data = JSON.parse(localStorage.getItem('key')) ? JSON.parse(localStorage.getItem('key')) : [];
+
+if(data.some((value)=>{
+    return  value.email == email
+})){
+ alert("Email already exist")
+ return;
+}
+
+let stuObj ={
+    "fname":fname,
+    "last" : last,
+    "email":email,
+    "num": num,
+    "pass":pass,
+    "confirm":confirm
+}
+data.push(stuObj)
+
+localStorage.setItem("key",JSON.stringify(data))
+alert("Data succesfully Submitted")
+
+window.location.href= 'task2.html';
+
+}
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

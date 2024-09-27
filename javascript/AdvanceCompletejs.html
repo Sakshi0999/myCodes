@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance javascript Concept</title>
+
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing Images</h2>
+    <div><ul id="images">
+        <!-- <li><img width="300px" id="gorilla" onclick="alert('I am Gorilla')" src="https://files.worldwildlife.org/wwfcmsprod/images/HERO_Mountain_Gorilla_Silverback_WW22557/hero_small/17l7fosr27_Mountain_Gorilla_Silverback_WW22557.jpg"></li> -->
+        
+        
+        <li><img width="300px" id="gorilla" src="https://files.worldwildlife.org/wwfcmsprod/images/HERO_Mountain_Gorilla_Silverback_WW22557/hero_small/17l7fosr27_Mountain_Gorilla_Silverback_WW22557.jpg"></li>
+        <li><img width="300px" id="Greenery" src="https://thumbs.dreamstime.com/b/mountain-river-middle-green-forest-tranquil-scenery-46093692.jpg"></li>
+        <li><img width="300px" id="mountain" src="https://cdn.pixabay.com/photo/2017/02/01/22/02/mountain-landscape-2031539_1280.jpg"></li>
+        <li><img width="300px" id="clouds" src="https://static.vecteezy.com/system/resources/thumbnails/026/542/204/small_2x/landscape-natural-beautiful-mountains-and-blue-sky-panorama-photo.jpg" ></li>
+        <li><a style="color: aliceblue;" href="https://www.google.com/" id="google">Google</a></li>
+</ul>
+</div>
+
+
+<script>
+      //event approach second 
+    // document.getElementById('gorilla').onclick = function(){
+        // alert("hey, i am gorilla again");
+    // }
+
+
+    //attachEvent()
+//jQuery - on
+// topics to read --- > type, timestamp, defaultPrevented
+//target, toElement, srcElement, currentTarget,
+//clientX, clientY, screenX, screenY
+//altKey, ctrlKey, shiftKey, keycode 
+
+
+//event approach third
+// document.getElementById('gorilla').addEventListener('click', function(e){
+//  console.log(e);
+    // alert('hey, i am gorilla third time')
+// })
+
+
+// document.getElementById('images').addEventListener('click', function(e){
+//     console.log("ul images clicked");
+// } , false )
+
+// document.getElementById('gorilla').addEventListener('click', function(e){
+//     console.log("li gorilla clicked");
+//     e.stopPropagation()
+// }, false)
+
+
+// prevent default - prevent page to load 
+// document.getElementById('google').addEventListener('click', function(e){
+// e.preventDefault();
+// e.stopPropagation();
+// console.log("google clicked");
+// }, false)
+
+////////////////////////////////////////////////////////////////
+
+
+// document.querySelector('#images').addEventListener
+// ('click', function(e){
+//     console.log(e.target.tagName)
+
+// if (e.target.tagName === 'IMG'){
+//     console.log(e.target.id);
+//     const removeImg = e.target.parentNode
+//        removeImg.remove()
+// }
+// })
+
+/////////////////////////////////////////////////////////////
+
+// asychro & synchro code 
+// javascript is a sychronous and single threaded language by default
+
+// execution context --->> is execute one line of code at a time 
+//  console log 1 than run console log 2 
+//  each operation waits for the last one to complete before executing 
+// we have call stack and memory heap ----> needs to read 
+
+// Blocking code vs Non Blocking code 
+// blocking code block the flow of program and it read files synchronously 
+// Non-blocking code does not block execution and it can read file asynchronously 
+
+
+
+
+// next part in SetTimeoutJS.html
+
+
+
+
+
+
+</script>
+</body>
+</html>

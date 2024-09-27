@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// The filter() method creates a new array filled with elements that pass a test provided by a function.
+
+// The filter() method does not execute the function for empty elements.
+
+// The filter() method does not change the original array.
+
+
+let age = [10, 18, 20, 15, 11, 25 ]
+let ages = age.filter((value)=>{
+    return value <= 15;
+})
+
+console.log(ages);
+
+
+
+
+
+// The reduce() method executes a reducer function for array element.
+
+// The reduce() method returns a single value: the function's accumulated result.
+
+// The reduce() method does not execute the function for empty array elements.
+
+// The reduce() method does not change the original array.
+
+
+
+let a = [1,2,3,9,4]
+let b = a.reduce((value,index)=>{
+    return value + value;
+
+    // return value + index;
+})
+console.log(b);
+
+
+let c = [4,7,9,2,1]
+let d = c.filter((value)=>{
+    return value < 8
+})
+console.log(d)
+
+
+let e = [24, 4, 6, 7, 3, 42]
+let f = e.filter((value)=>{
+    return value % 2 == 0
+})
+console.log(f)
+
+
+
+let animals = ["dog", "wolf", "by", "family", "eaten", "camping"]
+let g = animals.filter((value)=>{
+    return value.length <= 6
+})
+console.log(g);
+
+
+
+
+
+function ofAge (arr){
+   return arr.filter(person => person.name.length < 15);
+
+   
+}
+console.log(ofAge([
+    { name: "Angelina Jolie", age: 80 },
+    { name: "Eric Jones", age: 2 },
+    { name: "Paris Hilton", age: 5 },
+    { name: "Kayne West", age: 16 },
+    { name: "Bob Ziroll", age: 100 }
+])); 
+
+           
+let h = [4, 6 , 12, 18 , 2]
+let i = h.reduce((value , index)=>{
+    return value + index;
+})
+console.log(i)
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</bo
+
+</html>

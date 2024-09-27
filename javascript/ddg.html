@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8y');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .main {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            width: 400px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        label {
+            display: block;
+            font-size: 1.2em;
+            font-weight: 600;
+            margin: 15px 0 5px;
+        }
+
+        input, select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            font-size: 1em;
+        }
+
+        button {
+            font-size: 1.2em;
+            font-weight: bolder;
+            color: white;
+            background-color: dodgerblue;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: deepskyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Library Registration Form</h1>
+        <form>
+            <label>First Name:</label>
+            <input type="text" placeholder="Enter your First name"><br>
+
+            <label>Last Name:</label>
+            <input type="text" placeholder="Enter your Last name"><br>
+
+            <label>Gender:</label>
+            <select>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select><br>
+
+            <label>Email:</label>
+            <input type="email" placeholder="Enter your email" required><br>
+
+            <label>Phone no.:</label>
+            <input type="number" placeholder="Enter your number" max="10"><br>
+
+            <label>Password:</label>
+            <input type="password" placeholder="Enter your password" required><br>
+
+            <button>ADD A MEMBER</button>
+        </form>
+    </div>
+</body>
+</html>

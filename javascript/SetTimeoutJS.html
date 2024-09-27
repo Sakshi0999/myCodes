@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetTimeout & setInterwal</title>
+
+    <h1>javascript SetTimeout, clearTimeout and SetInterwal, clearInterwal</h1>
+
+<button id="start">Start</button>
+<button id="stop">stop</button>
+</head>
+<body>
+    <script>
+//setTimeout--> its set a time to run the code after a mentioned timeframe, it runs in milisecond 
+
+// setTimeout( function(){
+//     console.log("Sakshi")
+// }, 1000)
+
+//////////////////////////////////////
+
+//  const sayMyName =  function(){
+//     console.log("Sakshi");
+// }
+// setTimeout(sayMyName, 2000)
+
+////////////////////////////////////////////////////
+// const setTime = function(){
+//     console.log("my name is sakshi");
+// }
+// const changeName = function(){
+//     document.querySelector('h1').innerHTML = "my name is dimple now"
+
+// }
+// setTimeout(changeName, 1000);
+
+///////////////////////////////////////////////////////////////
+
+// +++++++++++ ClearTimeout +++++++++++++
+
+
+// const setTime = setTimeout( function(){
+//     console.log("my name is sakshi");
+// }, 2000)
+
+// document.querySelector('#stop').addEventListener( 'click', function(){
+ 
+//     clearTimeout(setTime);
+// console.log("Stopped");
+// })
+
+///////////////////////////////////////////////////////////////////
+
+//++++++++++++++ SetInterval and clear interval ++++++++++++=
+
+// setInterval( function(){
+// console.log("sakshi here");
+// }, 1000)
+
+
+// const setInter = function(){
+// console.log("sakshi here");
+// }
+// setInterval( setInter, 1000);
+
+///////////////////////////////////////////
+
+// const sayDate = function(str){
+    // console.log( str, Date.now());
+// }
+//  const clearint = setInterval(sayDate, 1000, "hi")
+// 
+// clearInterval(clearint);
+
+//++++++++++++++++++++++++++++++++++++++++
+
+// const start = setInterval( function (){
+//     console.log("sakshi here")
+// }, 1000)
+
+
+// const startt = function(){
+//     console.log("sakshi here")
+// }
+// setInterval(startt, 1000)
+
+let start;
+document.querySelector('#start').addEventListener('click', function(){
+
+     start = setInterval( function(){
+        console.log('start')
+    }, 1000);
+});
+
+document.querySelector('#stop').addEventListener('click', function(){
+clearInterval(start)
+console.log("stopped")
+})
+
+////////////////////////////////////////////////
+
+// setInterval( function(){
+// console.log('Rupaaaaa')
+// }, 1000)
+
+// const rupa = function(){
+// console.log('Rupaaaaa')
+// }
+// setInterval( rupa, 1000);
+
+
+
+// document.querySelector('#start').addEventListener('click', function(){
+//    const rupaa =  function(){
+// console.log('Rupaaaaa')
+// }
+// setInterval( rupaa, 1000);
+// })
+
+///////////////////////////////////////////
+
+// const rupa =  setInterval(function(){
+// console.log('Rupaaaaa')
+// } , 1000);
+// clearInterval(rupa);
+
+///////////////////////////////////////////////
+
+// ------> next project in --> ProjectSet5.html
+// ---------> next project in --> ProjectSet6.html
+
+// next in APIrequest.html
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
