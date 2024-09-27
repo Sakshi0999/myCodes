@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <button id="Orange">Orange</button>
+    <button id="Green">Green</button>
+
+</head>
+<body>
+    
+
+ <!-- <script> -->
+
+        <!-- //+++++++++++ Closure function in JS +++++++++++++ --> 
+<!--  -->
+<!-- // LEXICAL SCOPING --->  
+ <!-- Lexical scope refers to the visibility of variables and functions based on their location in the source code. --> 
+<!-- // In JavaScript, this means that a function's scope is determined by where it is defined in the code, not where it is called.  -->
+<!-- //This concept is crucial for understanding closures and how JavaScript manages variable scope. -->
+<!--  -->
+<!--  -->
+<!-- // function outer() { -->
+<!-- //     let name = "sakshi" -->
+<!--      -->
+<!-- //     function inner() { -->
+<!-- //         let secret = "my123" -->
+<!-- //         console.log("inner", name); -->
+<!-- //     } -->
+
+<!-- //     function innerTwo(){ -->
+<!-- //         console.log("innerTwo", name); -->
+<!-- //     } -->
+<!-- //     inner(); -->
+<!-- //     innerTwo(); -->
+<!-- // } -->
+<!-- // outer() -->
+<!-- // console.log("outer", name); -->
+<!--  -->
+<!--  -->
+<!-- // CLOSURE --->
+   <!-- a closure is a powerful and important concept that allows a function to access variables from an outer scope even after the outer function has finished executing. --> -->
+<!-- // Closures are created whenever a function is defined within another function, and they enable the inner function to "close over" its lexical environment, preserving access to the variables of the outer function. -->
+ <!-- // function makeFunc() { -->
+<!-- //     const name = "Firefox"; -->
+<!-- //     function innerFun() { -->
+<!-- //         console.log(name); -->
+<!-- //     } -->
+<!-- //     return innerFun; -->
+<!-- // } -->
+ <!-- // const fun = makeFunc();  -->
+<!-- // fun();  -->
+<!-- </script>  -->
+<!-- ////////////////////////////////////////////////// -->
+
+
+<script>
+//     document.getElementById('Orange').addEventListener('click', function(){
+//         document.body.style.backgroundColor = 'orange';
+//     })
+
+//     document.getElementById('Green').addEventListener('click', function(){
+//      document.body.style.backgroundColor = 'green';
+//  })
+
+////////////////// by using closure +++++++++++++
+
+ function clickHandler(color) {
+    // document.body.style.backgroundColor = `${color}`
+    
+   return function(){
+        document.body.style.backgroundColor = `${color}`
+    }
+ }
+
+ document.getElementById('Orange').onclick = clickHandler("Orange");
+ document.getElementById('Green').onclick = clickHandler("Green");
+
+</script>
+
+
+// JavaScript --> var, let, const --> if-else --> loops- forin--forof--foreach
+// arrays, array methods, objects, map, filter, reduce
+// destructuring --> Promise--> async & await --> currying --> closure --> high order functions- arrow functions - this & new 
+//events -- onclick -- onsubmit --> call back 
+// local storage-- session storage- json
+// rest and spread operator --> getter & setter method
+// template litreals , object litrals 
+// API request, fetch method() --> 
+
+</body>
+</html>

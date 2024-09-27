@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+// The setItem() method sets the value of the specified Storage Object item.
+
+// The setItem() method belongs to the Storage Object, which can be either a localStorage object or a sessionStorage object.
+
+
+let sty_Name= "sakshi";
+localStorage.setItem('stuData', sty_Name);
+
+ console.log( localStorage.getItem('studata'))
+
+ let stu_Name= ['siddharth', 'twinkal'];
+ localStorage.setItem('stuData', JSON.stringify(stu_Name));
+ console.log(JSON.parse(localStorage.getItem('stuData')))
+
+
+
+
+  </script>  
+</body>
+</html>

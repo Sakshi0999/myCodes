@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+//A Map holds key-value pairs where the keys can be any datatype.
+
+//A Map remembers the original insertion order of the keys.
+
+//A Map is iterable, so it can be directly used in loops.
+
+let arr = [5,7,9];
+
+let newArr = arr.map((value, index, array)=>{
+    return value + value;
+});
+
+console.log(newArr);
+
+
+
+
+
+
+let arry = [5,7,9];
+
+let newArry = arry.map((value, index, array)=>{
+    return value + array;
+});
+
+console.log(newArry);
+
+
+
+let arryindex = [5,7,9];
+
+let newarry = arryindex.map((value, index, array)=>{
+    return value + index;
+});
+
+console.log(newarry);
+
+
+//map creates a new array by performing some operation on each array element.
+
+let ar = [ 45,78,98]
+let a = ar.map((value, index, array)=>{
+    return value + array
+})
+console.log(a)
+
+
+//1) Make an array of numbers that are doubles of the first array
+
+let ary = [2,5,100]
+let b = ary.map((value)=>{
+       return value + value
+})
+console.log(b);
+
+//2) Take an array of numbers and make them strings
+
+let c = [5,4,2]
+let d = c.map((value)=>{
+    return value.toString()
+})
+console.log(d);
+
+
+//3) Capitalize each of an array of names
+
+let names = [ "sakshi", "pooja"];
+let f = names.map(value =>{
+    return value.charAt(0).toUpperCase() + value.slice(1);
+});
+console.log(f);
+
+
+
+
+    </script>
+</body>
+</html>

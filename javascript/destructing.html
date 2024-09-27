@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+
+
+//destructuring of Object
+
+// let student ={
+
+// name: 'sakshi',
+// desig: 'mern stack',
+// age: 22,
+// address:{
+//     street: 'abc',
+//     city: 'Indore',
+//     state: 'MP'
+
+// }
+// };
+
+// console.log(student.address.street);
+
+// let {name, desig, age:{street,city,state}} = student;
+// console.log(name);
+// console.log(desig);
+// console.log(street);
+// console.log(city);
+// console.log(state);
+
+
+//destructuring in array
+
+// const fruits = ["orange", "mango", "apple", "banana"];
+
+// console.log(fruits);
+
+
+const names = {
+
+first: 'Sakshi',
+Last: 'thakur',
+city: 'indore'
+
+}
+
+let { first, last, city} = names;
+console.log(names.city);
+
+
+//destrucuring in array 
+
+let arr = ['sakshi', 20, 'indore', [452001, 'india']];
+let [name, age, place, [pincode, country]]= arr; 
+console.log(country)
+</script>
+</head>
+<body>
+    
+</body>
+</html>

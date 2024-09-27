@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <style>
+
+.main{
+
+    height: 410px;
+    width: 300px;
+background-color: rgb(133, 13, 19);
+background-image: url(https://lead-academy.org/blog/wp-content/uploads/2022/06/What-Does-Maths-Stand-for.webp);
+border: 20px solid #6d0707;
+border-radius: 30px;
+margin-left: 200px;
+
+
+}
+
+
+#display{
+
+color: rgb(17, 0, 255);
+font-weight: bolder;
+}
+
+button{
+height: 68px;
+width: 72px;
+    align-items: center;
+    color: rgb(243, 12, 58);
+    font-weight: bolder;                                            
+    border-radius: 5px;
+background-image: url();
+cursor: cell;
+font-size: 20px;
+
+}
+
+.res{
+    border: 5px solid rgb(245, 222, 179);
+    height: 60px;
+    display: flex;
+    font-size: xx-large;
+    border-radius: 5px;
+    background-color: rgba(250, 235, 215, 0.904);
+
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="main">
+        <div class="res" id="display">
+        </div>
+
+        <button>AC</button>
+        <button>DEL</button>
+        <button>%</button>
+        <button>/</button>
+
+        <br>
+        <button>7</button>
+<button>8</button>
+<button>9</button>
+<button>*</button>
+
+       
+       
+<br>
+
+<button>4</button>
+<button>5</button>
+<button>6</button>
+<button>-</button>
+
+
+<br>
+<button>1</button>
+<button>2</button>
+<button>3</button>
+<button>+</button>
+
+<br>
+<button>0</button>
+<button>00</button>
+<button>.</button>
+<button>=</button>
+
+
+
+
+    </div>
+
+
+    <script>
+debugger
+//function Calculator(){
+//const button = document.querySelectorAll('button');
+//const dis = document.querySelector('.res');
+
+document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('button');
+    const display = document.getElementById('display');
+    let currentInput = '';
+    let operator = '';
+    let previousInput = '';
+
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            const value = button.textContent;
+
+            if (value === 'AC') {
+                currentInput = '';
+                operator = '';
+                previousInput = '';
+                display.textContent = '';
+            } else if (value === 'DEL') {
+                currentInput = currentInput.slice(0, -1);
+                display.textContent = currentInput;
+            } else if (value === '=') {
+                if (previousInput !== '' && operator !== '') {
+                    currentInput = calculate(previousInput, currentInput, operator);
+                    display.textContent = currentInput;
+                    previousInput = '';
+                    operator = '';
+                }
+            } else if (['+', '-', '*', '/', '%'].includes(value)) {
+                if (currentInput !== '') {
+                    if (previousInput === '') {
+                        previousInput = currentInput;
+                        currentInput = '';
+                        operator = value;
+                    } else if (operator !== '') {
+                        currentInput = calculate(previousInput, currentInput, operator);
+                        display.textContent = currentInput;
+                        previousInput = currentInput;
+                        currentInput = '';
+                        operator = value;
+                    }
+                }
+            } else {
+                currentInput += value;
+                display.textContent = currentInput;
+            }
+        });
+    });
+
+    function calculate(a, b, op) {
+        let result;
+        switch (op) {
+            case '+':
+                result = parseFloat(a) + parseFloat(b);
+                break;
+            case '-':
+                result = parseFloat(a) - parseFloat(b);
+                break;
+            case '*':
+                result = parseFloat(a) * parseFloat(b);
+                break;
+            case '/':
+                result = parseFloat(a) / parseFloat(b);
+                break;
+            case '%':
+                result = parseFloat(a) % parseFloat(b);
+                break;
+            default:
+                return '';
+        }
+        return result.toString();
+    }
+});
+</script>
+</body>
+</html>
