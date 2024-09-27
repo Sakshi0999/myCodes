@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Portions with Float</title>
+    <style>
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    height: 100vh;
+}
+
+.left, .right {
+    height: 100%;
+    float: left;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.left {
+    background-color: lightblue;
+}
+
+.right {
+    background-color: lightgreen;
+}
+
+/* Clear floats after the container */
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">Left Portion</div>
+        <div class="right">Right Portion</div>
+    </div>
+</body>
+</html>
