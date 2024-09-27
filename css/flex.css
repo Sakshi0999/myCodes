@@ -1,0 +1,119 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+flex-grow: 1;
+gap: 10px;
+}
+
+.head{
+    border: 1px solid lightgray;
+    padding: 10px;
+    margin: auto;
+    max-width: 800px;
+    border-radius: 32px;
+    display: flex;
+    gap: 70px;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h5,p {
+    margin: 0 10px;
+}
+
+h5{
+    font-size: 16px;
+}
+
+p{
+    font-size: 14px;
+
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+ margin-right: 10px;
+}
+
+.search{
+    height: 50px;
+    justify-content: end;
+    margin: 0;
+
+}
+
+button{
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+
+.img1{
+    border: 1px solid lightgray;
+    padding: 8px;
+    width: 280px;
+    border-radius: 14px;
+    margin: 10px;
+
+}
+
+img{
+    width: 100%;
+    border-radius: 14px;
+    height: 200px;
+}
+
+
+.flex{
+    align-items: center;
+    display: flex;
+}
+
+.allimg{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Add spacing between items */
+   padding: 20px;
+}
+
+.svg{
+
+position: relative;
+bottom: 55px;
+margin-bottom: -133px;
+}
+
+.icon{
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.iconsss{
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    gap: 60px;
+    padding: 15px;
+}
+
+.name{
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    gap: 21px;
+    padding: 15px;
+    margin-top: -18px;
+}
